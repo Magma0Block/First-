@@ -1,0 +1,97 @@
+#include <cstdlib>
+#include <ctime>
+#include <iostream>
+#include <stdlib.h>
+
+using namespace std;
+
+int main() {
+    setlocale(LC_ALL, "ru_RU");
+    srand((unsigned)time(0));
+    int cmd = -1;
+    int meat, bread, exotic;
+    string s;
+    cout << "Добро пожаловать в микро приложение!" << endl;
+    while (cmd != 0) {
+        cout << "Что вы хотите?" << endl;
+        cout << "1.Случайно выбрать еду" << endl;
+        cout << "0.Выйти из приложения" << endl;
+        cin >> cmd;
+        system("cls");
+        switch (cmd) {
+        case 1:
+            cout << "Выбирете тип еды:" << endl;
+            cout << "1.Мясное" << endl;
+            cout << "2.Мучное" << endl;
+            cout << "3.Экзотика" << endl;
+            cin >> cmd;
+            switch (cmd) {
+            case 1:
+                if (cmd == 1) {
+                    meat = (rand() % 4) + 1;
+                    switch (meat) {
+                    case 1:
+                        cout << "Что на счет куриных ног?" << endl;
+                        break;
+                    case 2:
+                        cout << "Может куриные крылья?" << endl;
+                        break;
+                    case 3:
+                        cout << "Предлагаю Свининку в панировке" << endl;
+                        break;
+                    case 4:
+                        cout << "Только ты Рыба моей мечты" << endl;
+                    default:
+                        break;
+                    }
+                    cin.ignore();
+                    getchar();
+                    system("cls");
+                }
+            case 2:
+                if (cmd == 2) {
+                    bread = (rand() % 4) + 1;
+                    switch (bread) {
+                    case 1:
+                        cout << "А может Запекаончку?" << endl;
+                        break;
+                    case 2:
+                        cout << "Блинный день?" << endl;
+                        break;
+                    case 3:
+                        cout << "Беляшики..." << endl;
+                        break;
+                    case 4:
+                        cout << "Давай Пельмешки" << endl;
+                        break;
+                    }
+                    cin.ignore();
+                    getchar();
+                    system("cls");
+                }
+            case 3:
+                if (cmd == 3) {
+                    exotic = (rand() % 4) + 1;
+                    switch (exotic) {
+                    case 1:
+                        cout << "Купи Арбуз, ну или суши" << endl;
+                        break;
+                    case 2:
+                        cout << "А давай пиццу свою сделаем" << endl;
+                        break;
+                    case 3:
+                        cout << "Предлагаю Сожрать последнего царя древнего рима" << endl;
+                        break;
+                    case 4:
+                        cout << "А давай яблочек купим и Шарлотку сделаем?" << endl;
+                    }
+                    cin.ignore();
+                    getchar();
+                    system("cls");
+                }
+            }
+        }
+
+    }
+    cout << "До новых встреч!";
+}
